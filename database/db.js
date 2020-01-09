@@ -12,7 +12,8 @@ const sequelize = new Sequelize(process.env.MYSQL_DB, process.env.DB_USER,"",{
         acquire: 30000,
         idle: 10000
     }
-})
+});
+
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
