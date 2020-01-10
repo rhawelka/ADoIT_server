@@ -6,6 +6,7 @@ const Tasks = require("./routes/Tasks");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
@@ -18,6 +19,8 @@ app.use(
 app.use("/users",Users);
 app.use("/tasks", Tasks);
 
-app.listen(process.env.APP_PORT, () => {
+const server = app.listen(process.env.APP_PORT, () => {
     console.log("server up and running on PORT: " + process.env.APP_PORT);
 })
+
+module.exports = server
